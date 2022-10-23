@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Todo List Application</title>
+    <link rel="stylesheet" href="file.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <h1>My Daily Tasks</h1>
+    <div class="wrapper">
+      <div class="capture-task">
+        <img src="bars-icon.svg" alt="icon" />
+        <input type="text" placeholder="Make a new task" />
+      </div>
+      <div class="manage">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="awaiting">Awaiting</span>
+          <span id="accomplished">Accomplished</span>
+        </div>
+        <button class="delete-btn">Delete All</button>
+      </div>
+      <ul class="task-box"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
