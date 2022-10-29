@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
     <title>Todo List Application</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,15 +9,16 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <h1>My Daily Tasks</h1>
     <div class="wrapper">
-      <div class="capture-task">
-        <img src="bars-icon.svg" alt="icon" />
-        <input type="text" placeholder="Make a new task" />
+      <div class="task-input">
+        <img src="bars-icon.svg" />
+        <input type="text" placeholder="Add a new task" />
       </div>
-      <div class="manage">
+      <div class="controls">
         <div class="filters">
           <span class="active" id="all">All</span>
           <span id="awaiting">Awaiting</span>
@@ -28,6 +28,5 @@
       </div>
       <ul class="task-box"></ul>
     </div>
-    <script src="script.js"</script>
   </body>
 </html>

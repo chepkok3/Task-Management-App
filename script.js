@@ -1,4 +1,4 @@
-const taskCapture = document.querySelector(".capture-task input"),
+const taskCapture = document.querySelector(".task-input input"),
   filters = document.querySelectorAll(".filters span"),
   deleteAll = document.querySelector(".delete-btn"),
   taskBox = document.querySelector(".task-box");

@@ -28,17 +28,17 @@ h1 {
   border-radius: 7px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-.capture-task {
+.task-input {
   height: 52px;
   padding: 0 25px;
   position: relative;
 }
-.capture-task img {
+.task-input img {
   top: 50%;
   position: absolute;
   transform: translate(17px, -50%);
 }
-.capture-task input {
+.task-input input {
   height: 100%;
   width: 100%;
   outline: none;
@@ -47,21 +47,21 @@ h1 {
   padding: 0 20px 0 53px;
   border: 1px solid #999;
 }
-.capture-task input:focus,
-.capture-task input.active {
+.task-input input:focus,
+.task-input input.active {
   padding-left: 52px;
   border: 2px solid #3c87ff;
 }
-.capture-task input::placeholder {
+.task-input input::placeholder {
   color: #bfbfbf;
 }
-.manage,
+.controls,
 li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.manage {
+.controls {
   padding: 18px 25px;
   border-bottom: 1px solid #ccc;
 }
@@ -77,7 +77,7 @@ li {
 .filters span.active {
   color: #8ce11d;
 }
-.manage .delete-btn {
+.controls .task-input {
   border: none;
   opacity: 0.6;
   outline: none;
@@ -205,10 +205,10 @@ li {
   .filters span {
     margin: 0 5px;
   }
-  .capture-task {
+  .task-input {
     padding: 0 20px;
   }
-  .manage {
+  .controls {
     padding: 18px 20px;
   }
   .task-box {
