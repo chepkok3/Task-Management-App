@@ -19,12 +19,12 @@ function showTodo(filter) {
   let liTag = "";
   if (todos) {
     todos.forEach((todo, id) => {
-      let accomplished = todo.status == "accomplished" ? "checked" : "";
-      if (filter == todo.status || filter == "all") {
+      let accomplished = todo.status == "done" ? "checked" : "";
+      if (filter == todo.status || filter == "total") {
         liTag += `<li class="task">
                             <label for="${id}">
-                                <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${accomplished}>
-                                <p class="${accomplished}">${todo.name}</p>
+                                <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${done}>
+                                <p class="${done}">${todo.name}</p>
                             </label>
                             <div class="settings">
                                 <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
@@ -37,8 +37,8 @@ function showTodo(filter) {
       }
     });
   }
-  taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
-  let deleteAll = taskBox.querySelectorAll(".task");
+  taskBox.innerHTML = liTag || `<span>There are no tasks added</span>`;
+  let checkTask = taskBox.querySelectorAll(".task");
   !checkTask.length
     ? deleteAll.classList.remove("active")
     : deleteAll.classList.add("active");
@@ -46,7 +46,7 @@ function showTodo(filter) {
     ? taskBox.classList.add("overflow")
     : taskBox.classList.remove("overflow");
 }
-showTodo("all");
+showTodo("total");
 
 function showMenu(selectedTask) {
   let menuDiv = selectedTask.parentElement.lastElementChild;
@@ -62,7 +62,7 @@ function updateStatus(selectedTask) {
   let taskName = selectedTask.parentElement.lastElementChild;
   if (selectedTask.checked) {
     taskName.classList.add("checked");
-    todos[selectedTask.id].status = "accomplished";
+    todos[selectedTask.id].status = "done";
   } else {
     taskName.classList.remove("checked");
     todos[selectedTask.id].status = "awaiting";

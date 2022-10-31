@@ -11,6 +11,7 @@ body {
   height: 100vh;
   overflow: hidden;
   background-color: #d3d8d5;
+  overflow-y: auto;
 }
 h1 {
   position: relative;
@@ -219,4 +220,31 @@ li {
   .task label input {
     margin-top: 4px;
   }
+}
+
+#total:hover {
+  box-shadow: 0 3px 3px 0 rgb(173, 17, 17);
+  transform: translateY(-10px);
+  background: lavender;
+  border: none;
+  color: rgb(22, 6, 26);
+  font-size: large;
+}
+
+#awaiting:hover {
+  box-shadow: 0 3px 3px 0 rgb(17, 173, 66);
+  transform: translateY(-10px);
+  background: lavender;
+  border: none;
+  color: rgb(22, 6, 26);
+  font-size: large;
+}
+
+#done:hover {
+  box-shadow: 0 3px 3px 0 rgb(173, 17, 17);
+  transform: translateY(-10px);
+  background: lavender;
+  border: none;
+  color: rgb(22, 6, 26);
+  font-size: large;
 }
